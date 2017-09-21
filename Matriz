@@ -1,0 +1,101 @@
+/*
+Faça a soma, subtração, multiplicação por um escalar e multiplicação entre matrizes.
+ */
+ 
+package Aulas;
+
+/**
+ *
+ * @author Paulo
+ */
+ 
+import java.util.Scanner;
+
+public class Matriz {
+    public static void main(String[] args) {
+        int i,j,tam,escalar1,escalar2;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Informe o tamanho das matrizes:");
+        tam=input.nextInt();
+        int[][] A = new int[tam][tam];
+        int[][] B = new int[tam][tam];
+        int[][] C = new int[tam][tam];
+        
+        for(i=0;i<tam;i++){
+            for(j=0;j<tam;j++)
+            {
+                System.out.println("Digite o "+ (i+1) + "º elemento da linha " + (i + 1) + " coluna " + (j + 1) + ":");
+                A[i][j]=input.nextInt();
+            }
+        }
+        for(i=0;i<tam;i++){
+            for(j=0;j<tam;j++)
+            {
+                System.out.println("Digite o "+ (i+1) + "º elemento da linha " + (i + 1) + " coluna " + (j + 1) + ":");
+                B[i][j]=input.nextInt();
+            }
+        }
+        
+        System.out.println("\nSOMA DE MATRIZ:\n");
+        
+        for(i=0;i<tam;i++){
+            for(j=0;j<tam;j++)
+            {
+              C[i][j]=A[i][j]+B[i][j];
+              System.out.print(C[i][j]+ "   ");
+            }
+            System.out.println(" ");
+        }
+        
+        System.out.println("\nSUBTRAÇÃO DE MATRIZ:\n");
+        
+        for(i=0;i<tam;i++){
+            for(j=0;j<tam;j++)
+            {
+              C[i][j]=A[i][j]-B[i][j];
+              System.out.print(C[i][j]+ "   ");
+            }
+            System.out.println(" ");
+        }
+        
+        System.out.println("\nMULTIPLICAÇÃO DE MATRIZ POR UM ESCALAR:\n");
+        
+        System.out.println("\nInforme o escalar para a matriz A:");
+        escalar1=input.nextInt();
+        System.out.println(" ");
+        
+        for(i=0;i<tam;i++){
+            for(j=0;j<tam;j++)
+            {
+              C[i][j]=escalar1*A[i][j];
+              System.out.print(C[i][j]+ "   ");
+            }
+            System.out.println(" ");
+        }
+        
+        System.out.println("\nInforme o escalar para a matriz B:");
+        escalar2=input.nextInt();
+        System.out.println(" ");
+        
+        for(i=0;i<tam;i++){
+            for(j=0;j<tam;j++)
+            {
+              C[i][j]=escalar2*B[i][j];
+              System.out.print(C[i][j]+ "   ");
+            }
+            System.out.println(" ");
+        }
+        
+        System.out.println("\nMULTIPLICAÇÃO ENTRE MATRIZES:\n");
+        
+        for(i=0;i<tam;i++){
+            for(j=0;j<tam;j++)
+            {
+              C[i][j]=A[i][j]*B[i][j];
+              System.out.print(C[i][j]+ "   ");
+            }
+            System.out.println(" ");
+        }
+   
+    }
+}
